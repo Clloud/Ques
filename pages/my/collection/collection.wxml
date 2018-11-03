@@ -1,0 +1,11 @@
+<!--pages/my/collection/collection.wxml-->
+<view class="container">
+    <block wx:for="{{data}}">
+    <view class="answer-item" data-id="{{item.answer.id}}"
+      bindtap="toAnswer">
+      <view class="question">{{item.answer.question.title}}</view>
+      <view class="answer">{{item.answer.context}}</view>
+    </view>
+  </block>
+  <view class="footer">没有更多内容</view>
+</view>

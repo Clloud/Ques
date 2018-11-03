@@ -1,0 +1,32 @@
+<!--pages/discussion/main/main.wxml-->
+<import src="../../templates/questions/questions-tpl.wxml" />
+
+<view class="container">
+
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="search-box">
+
+      <block>
+        <view class="icon" bindtap="search">
+          <image src="../../../imgs/icon/search.png"></image></view>
+        <view class="content" bindtap="search"></view>
+      </block>
+
+      <view class="sep"></view>
+
+      <block bindtap="ask">
+        <view class="icon" bindtap="ask">
+          <image src="../../../imgs/icon/write.png"></image></view>
+        <view class="text" bindtap="ask">提问</view>
+      </block>
+
+    </view>
+  </view>
+
+  <view class="header"></view>
+
+  <!-- 推荐问题 -->
+  <template is="questions" data="{{questions:questions}}">
+  </template>
+</view>

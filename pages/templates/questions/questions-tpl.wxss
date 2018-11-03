@@ -1,0 +1,58 @@
+.questions{
+  background: #f4f4f4;
+}
+
+.question-item{
+  padding: 20rpx 50rpx 25rpx 35rpx;
+  background: #fff;
+  /* height: 280rpx; */
+  margin-bottom: 15rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.question-item .title{
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 22rpx;
+  line-height: 50rpx;
+  letter-spacing: 3rpx;
+
+  /* 隐藏超出两行的内容 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.question-item .answer{
+  font-size: 30rpx;
+  font-weight: 400;
+  color: #222;
+  line-height: 50rpx;
+  letter-spacing: 0.5rpx;
+
+  /* 隐藏超出三行的内容 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.answer-info{
+  margin-top: 30rpx;
+
+  display: flex;
+
+  font-size: 30rpx;
+  letter-spacing: 0.5rpx;
+  color: #aaa;
+}
+
+.answer-info .item{
+  margin-right: 20rpx;
+}

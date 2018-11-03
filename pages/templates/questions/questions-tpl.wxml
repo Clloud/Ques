@@ -1,0 +1,27 @@
+<template name="questions">
+  <view class="questions">
+    <block wx:for="{{questions}}">
+      <view class="question-item">
+
+        <view class="title" 
+          bindtap="onQuestionTap"
+          data-id="{{item.id}}">
+          {{item.title}}
+        </view>
+
+        <view class="answer" 
+          bindtap="onAnswerTap"
+          data-id="{{item.answer[0].id}}">
+          {{item.answer[0].user.nickname}}: {{item.answer[0].context}}
+        </view>
+
+        <view class="answer-info">
+          <view class="item">{{item.answer[0].approval_count}}赞同</view>
+          <view class="item">{{item.answer[0].collection_count}}收藏</view>
+          <view class="item">{{item.answer[0].comment_count}}评论</view>
+        </view>
+
+      </view>
+    </block>
+  </view>
+</template>

@@ -1,0 +1,7 @@
+/* pages/discussion/main/main.wxss */
+@import "../../templates/questions/questions-tpl.wxss";
+
+page, .container{
+  background: #f4f4f4;
+}
+

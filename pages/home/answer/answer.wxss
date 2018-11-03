@@ -1,0 +1,155 @@
+/* pages/discussion/answer/answer.wxss */
+.question{
+  padding: 5rpx 35rpx 20rpx 35rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.question .title{
+  font-size: 36rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+  color: #222;
+  margin-bottom: 30rpx;
+  line-height: 60rpx;
+}
+
+.question .manipulate{
+  display: flex;
+  justify-content: space-between;
+}
+
+.question .manipulate .add-answer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  border-radius: 8rpx;
+  padding: 10rpx;
+  font-size: 27.5rpx;
+  letter-spacing: 2rpx;
+  color: #0184FD;
+}
+
+.question .manipulate image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 10rpx;
+}
+
+.question .manipulate .view-all{
+  display: flex;
+  align-items: center;
+  letter-spacing: 2rpx;
+  font-size: 27.5rpx;
+  color: #666;
+}
+
+
+
+.separation{
+  height: 20rpx;
+  background: #f4f4f4;
+}
+
+
+.answer{
+  background: #fff;
+  margin-bottom: 15rpx;
+}
+
+.answer .content{
+  padding: 20rpx 35rpx 115rpx 35rpx;
+  font-size: 31.5rpx;
+  font-weight: 400;
+  color: #222;
+  line-height: 50rpx;
+  letter-spacing: 0.5rpx;
+}
+
+.answer .user{
+  padding: 5rpx 50rpx 5rpx 35rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.answer .user .name{
+  margin-left: 15rpx;
+  font-size: 30rpx;
+  color: #111;
+  font-weight: 550;
+}
+
+.answer .user image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+}
+
+.bottom-bar{
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  height: 95rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/*底边栏按钮*/
+.bottom-bar .button{
+  display: flex;
+
+  background: #efefef;
+  padding: 12rpx 18rpx;
+  /* width: 120rpx; */
+  border-radius: 7rpx;
+  font-size: 31rpx;
+  color: #aaaaaa;
+} 
+
+.bottom-bar .button .text{
+  margin-left: 15rpx;
+  /* padding-bottom: 10rpx; */
+}
+
+.bottom-bar .button .text-selected{
+  margin-left: 15rpx;
+  color: #0184FD;
+}
+
+.bottom-bar .button image{
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.bottom-bar .group{
+  display: flex;
+  /* width: 160rpx; */
+  justify-content: space-between;
+}
+
+.bottom-bar .group .item-left{
+  margin-right: 30rpx;
+}
+
+.bottom-bar .group .item{
+  display: flex;
+  font-size: 32rpx;
+  color: #aaaaaa;
+}
+
+.bottom-bar .group .item .text{
+  margin-left: 5rpx;
+}
+
+.bottom-bar image{
+  width: 48rpx;
+  height: 48rpx;
+}

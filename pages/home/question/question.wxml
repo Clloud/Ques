@@ -1,0 +1,66 @@
+<!--pages/discussion/question/question.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="search-box">
+
+      <block>
+        <view class="icon" bindtap="search">
+          <image src="../../../imgs/icon/search.png"></image></view>
+        <view class="content" bindtap="search"></view>
+      </block>
+
+      <view class="sep"></view>
+
+      <block bindtap="ask">
+        <view class="icon" bindtap="ask">
+          <image src="../../../imgs/icon/write.png"></image></view>
+        <view class="text" bindtap="ask">提问</view>
+      </block>
+
+    </view>
+  </view>
+  <view class="header"></view>
+
+  <view class="question">
+    <view class="title">{{data.question.title}}</view>
+    <view class="description">{{data.question.description}}</view>
+
+    <block wx:if="{{hasAnswered}}">
+      <view class="answer-question" 
+        bindtap="toMyAnswer">
+        <view>
+          <image src="../../../imgs/icon/answer@blue.png"></image>
+        </view>
+        <view>查看回答</view>
+      </view>
+    </block>
+
+    <block wx:else>
+      <view class="answer-question" 
+        data-id="{{data.question.id}}" bindtap="addAnswer">
+        <view>
+          <image src="../../../imgs/icon/answer@blue.png"></image>
+        </view>
+        <view>写回答</view>
+      </view>
+    </block>
+
+
+  </view>
+
+  <view class="answer-count">{{data.answer.length}}个回答</view>
+
+  <view class="answers">
+    <block wx:for="{{data.answer}}">
+      <view class="answer-item" data-id="{{item.id}}" bindtap="onAnswerTap">
+        <view class="user">
+          <view><image src="{{item.user.avatar_url}}"></image></view>
+          <view class="name">{{item.user.nickname}}</view>
+        </view>
+        <view class="content">{{item.context}}</view>
+        <view></view>
+      </view>
+    </block>
+  </view>
+</view>

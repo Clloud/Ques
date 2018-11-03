@@ -1,0 +1,53 @@
+/* pages/my/collection/collection.wxss */
+page, .container{
+  background: #f4f4f4;
+}
+
+.answer-item{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 30rpx 30rpx;
+  margin-top: 15rpx;
+  border-bottom: 1px solid #bbb;
+  font-size: 31rpx;
+  font-weight: 550;
+}
+
+.answer-item .question{
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  line-height: 50rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+
+  /* 隐藏超出2行的内容 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.answer-item .answer{
+  font-size: 30rpx;
+  letter-spacing: 0.5rpx;
+  line-height: 45rpx;
+
+  /* 隐藏超出3行的内容 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  color: #999;
+  margin: 60rpx 0;
+}

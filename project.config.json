@@ -1,0 +1,83 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.2",
+	"appid": "wx14e16119501dda93",
+	"projectname": "Ques",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": 0,
+					"name": "ask-question",
+					"pathName": "pages/home/ask-question/ask-question",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my-profile",
+					"pathName": "pages/my/my-profile/my-profile",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my-work",
+					"pathName": "pages/my/my-work/my-work",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "answer",
+					"pathName": "pages/home/answer/answer",
+					"query": "id=23"
+				},
+				{
+					"id": 4,
+					"name": "question",
+					"pathName": "pages/home/question/question",
+					"query": "id=18"
+				},
+				{
+					"id": -1,
+					"name": "add-answer",
+					"pathName": "pages/home/add-answer/add-answer",
+					"query": "id=18"
+				},
+				{
+					"id": 6,
+					"name": "comment",
+					"pathName": "pages/home/comment/comment",
+					"query": "id=23"
+				}
+			]
+		}
+	}
+}

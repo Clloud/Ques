@@ -1,0 +1,26 @@
+<!--pages/discussion/add-answer/add-answer.wxml-->
+<view class="container">
+    
+    <view class="title-wrapper">
+      <view class="title">{{question.question.title}}</view>
+    </view>
+
+    <view class="description">
+    <view class="area-view">
+      <textarea placeholder="写回答..." 
+        placeholder-style="color: #B4B4B4" 
+        maxlength="-1"
+        class="textarea"
+        bindinput="answerInput" value="{{answer}}"/>
+    </view>
+  </view>
+
+  <view class="button-frame" bindtap="submit">
+    提交回答
+  </view>
+
+  <view class="alert" style="display:{{alertActive}}">
+    <view class="text">{{msg}}</view>
+  </view>
+
+</view>

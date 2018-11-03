@@ -1,0 +1,35 @@
+<!--pages/my/my-work/my-work.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="item {{questionSelected?'selected':''}}" bindtap="onQuestionTap">提问</view>
+
+    <view class="item {{answerSelected?'selected':''}}" bindtap="onAnswerTap">回答</view>
+
+  </view>
+
+  <view class="holder"></view>
+
+  <!-- 我的提问 -->
+  <view class="{{questionSelected?'show':'hidden'}}">
+    <block wx:for="{{question}}">
+      <view class="question-item" data-id="{{item.id}}"
+        bindtap="toQuestion">
+        <view class="title">{{item.title}}</view>
+        <view class="time">{{item.update_time}}</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 我的回答 -->
+  <view class="{{answerSelected?'show':'hidden'}}">
+    <block wx:for="{{answer}}">
+      <view class="answer-item" data-id="{{item.id}}"
+        bindtap="toAnswer">
+        <view class="question">{{item.question.title}}</view>
+        <view class="answer">{{item.context}}</view>
+        <view class="time">{{item.update_time}}</view>
+      </view>
+    </block>
+  </view>
+
+</view>

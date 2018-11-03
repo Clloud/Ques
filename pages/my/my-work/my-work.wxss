@@ -1,0 +1,116 @@
+/* pages/my/my-work/my-work.wxss */
+page, .container{
+  background: #f4f4f4;
+}
+
+.holder{
+  height: 70rpx;
+}
+
+.header{
+  width: 750rpx;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  height: 70rpx;
+  background: #fff;
+  box-shadow: 0 0 15rpx #333;
+}
+
+.header .item{
+  color: #999;
+  font-size: 30rpx;
+  letter-spacing: 5rpx;
+  padding: 0 40rpx;
+}
+
+.header .selected{
+  color: #111;
+  border-bottom: 1.8px solid #333;
+}
+
+.show{
+  display: block;
+}
+
+.hidden{
+  display: none;
+}
+
+.question-item{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 30rpx 30rpx;
+  margin-top: 15rpx;
+  border-bottom: 1px solid #bbb;
+}
+
+.question-item .title{
+  color: #333;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  line-height: 50rpx;
+  font-weight: 600;
+
+  /* 隐藏超出2行的内容 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.question-item .time{
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.answer-item{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 30rpx 30rpx;
+  margin-top: 15rpx;
+  border-bottom: 1px solid #bbb;
+  font-size: 31rpx;
+  font-weight: 550;
+}
+
+.answer-item .question{
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  line-height: 50rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+
+  /* 隐藏超出2行的内容 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.answer-item .answer{
+  font-size: 30rpx;
+  letter-spacing: 0.5rpx;
+  line-height: 45rpx;
+
+  /* 隐藏超出3行的内容 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.answer-item .time{
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  color: #999;
+}

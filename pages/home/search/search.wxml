@@ -1,0 +1,30 @@
+<!--pages/discussion/search/search.wxml-->
+<import src="../../templates/questions/questions-tpl.wxml" />
+
+<view class="container">
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="search-box">
+
+      <block>
+        <view class="content">
+          <view class="input-view">
+            <input placeholder="搜索问题"
+              placeholder-style="color: #777"
+              bindinput="queryInput" focus="true" value="{{query}}">
+            </input>
+          </view>
+        </view>
+        <view class="icon" bindtap="search">
+          <image src="../../../imgs/icon/search.png"></image></view>
+      </block>
+
+    </view>
+  </view>
+  <view class="header"></view>
+
+  <!-- 查询结果 -->
+  <template is="questions" data="{{questions:questions}}">
+  </template>
+
+</view>

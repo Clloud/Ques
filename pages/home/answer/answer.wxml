@@ -1,0 +1,93 @@
+<!--pages/discussion/answer/answer.wxml-->
+<view class="container">
+  <view class="question">
+    <view class="title">{{question.question.title}}</view>
+
+    <view class="manipulate">
+
+      <block wx:if="{{hasAnswered}}">
+        <view class="add-answer" 
+          bindtap="toMyAnswer" >
+          <view>
+            <image src="../../../imgs/icon/answer@blue.png"></image>
+          </view>
+          <view>查看回答</view>
+        </view>        
+      </block>
+
+      <block wx:else>
+        <view class="add-answer" 
+          data-id="{{question.question.id}}" bindtap="addAnswer" >
+          <view>
+            <image src="../../../imgs/icon/answer@blue.png"></image>
+          </view>
+          <view>写回答</view>
+        </view>
+      </block>
+
+      <view class="view-all" 
+        data-id="{{question.question.id}}" 
+        bindtap="onQuestionTap">
+        查看全部{{question.answer_count}}个回答 >
+      </view>
+
+    </view>
+
+  </view>
+
+  <view class="separation"></view>
+
+  <view class="answer">
+    <view class="user">
+      <view><image src="{{data.user.avatar_url}}"></image></view>
+      <view class="name">{{data.user.nickname}}</view>
+    </view>
+
+    <view class="content">
+      <text>{{data.context}}</text>
+    </view>
+    
+  </view>
+
+  <!-- 底边栏 -->
+  <view class="bottom-bar">
+    <!-- 点赞 -->
+    <view class="button" bindtap="approve">
+      <block wx:if="{{approvalStatus}}">
+        <image src="../../../imgs/icon/agree@selected.png"></image>
+        <view class="text-selected">{{approvalCount}}</view>
+      </block>
+      <block wx:else>
+        <image src="../../../imgs/icon/agree.png"></image>
+        <view class="text">{{approvalCount}}</view>
+      </block>
+
+
+    </view>
+
+    <view class="group">
+      <!-- 收藏 -->
+      <view class="item-left" bindtap="collect">
+        <block wx:if="{{collectionStatus}}">
+          <image src="../../../imgs/icon/collect@selected.png"></image>
+        </block>
+        <block wx:else>
+          <image src="../../../imgs/icon/collect.png"></image>
+        </block>
+      </view>
+
+      <!-- 评论 -->
+      <view class="item" bindtap="toComment">
+        <image src="../../../imgs/icon/comment.png"></image>
+        <view class="text">{{data.comment_count}}</view>
+      </view>
+
+    </view>
+
+  </view>
+
+  <!-- 提示信息 -->
+  <view class="alert" style="display:{{alertActive}}">
+    <view class="text">{{msg}}</view>
+  </view>
+</view>

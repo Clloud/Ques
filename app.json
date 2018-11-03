@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/main/main",
+    "pages/my/main/main",
+    "pages/home/answer/answer",
+    "pages/home/question/question",
+    "pages/home/add-answer/add-answer",
+    "pages/home/search/search",
+    "pages/home/ask-question/ask-question",
+    "pages/my/my-work/my-work",
+    "pages/my/my-profile/my-profile",
+    "pages/my/collection/collection",
+    "pages/home/comment/comment"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/main/main",
+        "text": "主页",
+        "iconPath": "imgs/toolbar/home.png",
+        "selectedIconPath": "imgs/toolbar/home@selected.png"
+      },
+      {
+        "pagePath": "pages/my/main/main",
+        "text": "我的",
+        "iconPath": "imgs/toolbar/me.png",
+        "selectedIconPath": "imgs/toolbar/me@selected.png"
+      }
+    ],
+    "borderStyle": "#000",
+    "selectedColor": "#333333",
+    "color": "#cccccc",
+    "backgroundColor": "#FFF"
+  }
+}

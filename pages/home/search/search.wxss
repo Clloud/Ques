@@ -1,0 +1,15 @@
+/* pages/discussion/search/search.wxss */
+@import "../../templates/questions/questions-tpl.wxss";
+
+.content{
+  flex: 600rpx;
+}
+
+.input-view{
+  height: 65rpx;
+  font-size: 29rpx;
+  color: #444;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+}

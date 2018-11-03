@@ -1,0 +1,43 @@
+<!--pages/my/my-profile/my-profile.wxml-->
+<view class="container">
+
+  <view class="avatar">
+    <image src="{{data.avatar_url}}"></image>
+  </view>
+
+  <view class="input-view">
+    <view class="title">用户名</view>
+    <view>{{data.nickName}}</view>
+  </view>
+
+  <view class="input-view">
+    <view class="title">居住地</view>
+    <view>{{data.city}}</view>
+  </view>
+
+  <view class="input-view">
+    <view class="title">学校</view>
+    <input placeholder="添加学校信息" 
+      placeholder-style="color: #999" value="{{school}}"
+      bindinput="schoolInput">
+    </input>
+  </view>
+
+  <view class="input-view">
+    <view class="title">专业</view>
+    <input placeholder="添加专业信息" 
+      placeholder-style="color: #999" value="{{major}}"
+      bindinput="majorInput">
+      {{data.major}}
+    </input>
+  </view>
+
+  <view class="button-frame" bindtap="submit">
+    保存
+  </view>
+
+  <view class="alert" style="display:{{alertActive}}">
+    <view class="text">{{msg}}</view>
+  </view>
+
+</view>

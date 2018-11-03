@@ -1,0 +1,106 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: "Microsoft Yahei";
+}  
+
+/******************* 提示框 *****************/
+.alert{
+  position: absolute;
+  top: 45vh;
+  left: 280rpx;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20rpx;
+  background: #393939;
+  height: 65rpx;
+  opacity: 0.8;
+}
+
+.alert .text{
+  font-size: 29rpx;
+  color: #fff;
+  letter-spacing:2rpx;
+}
+
+/************************ 搜索框 ******************/
+.search{
+  position: fixed;
+  width: 750rpx;
+  background: #fff;
+  padding: 0rpx 15rpx 20rpx;
+  box-shadow: 0 0 20rpx #999;
+}
+
+.search-box{
+  width: 720rpx;
+  box-sizing: border-box;
+  height: 65rpx;
+  background:#eee;
+  border-radius: 10rpx;
+  padding: 5rpx 30rpx;
+
+  display: flex;
+  align-items: center;
+
+}
+
+.search-box .content{
+  height: 60rpx;
+  flex: 470rpx;
+}
+
+.search-box .icon image{
+  padding-top: 10rpx;
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.search-box .sep{
+  border-right: 1.5px solid #ccc;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.search-box .text{
+  margin-left: 15rpx;
+  flex: 70rpx;
+  justify-content: center;
+  display: flex;
+  font-size: 33rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+}
+
+.header{
+  height: 80rpx;
+}
+
+/**************** 提交按钮 ***********************/
+.button-frame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 34rpx;
+  color: #0184FD;
+  letter-spacing: 2px;
+
+  position: fixed;
+  bottom: 40rpx;
+  left: 75rpx;
+
+  width: 600rpx;
+  height: 75rpx;
+
+  border: 1px solid #0184FD;
+  border-radius: 10rpx;
+}
+

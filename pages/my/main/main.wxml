@@ -1,0 +1,79 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+
+  <!--用户身份-->
+  <view class="my-header">
+    <view class="avatar">
+      <image src="{{userInfo.avatarUrl}}"></image> 
+    </view>
+
+    <block wx:if="{{userInfo.nickName}}">
+      <view class="nick-name">
+        <view>{{userInfo.nickName}}</view>
+      </view>
+
+      <!-- <block wx:if="{{savedUserInfo.school != 'null'}}">
+        <view class="info">
+          <view class="img">
+            <image src="../../../imgs/icon/school.png"></image>
+          </view>
+          <view>{{savedUserInfo.school}}</view>
+
+          <view class="sep"></view>
+          <view>{{savedUserInfo.major}}</view>
+        </view>
+      </block> -->
+
+      <view class="edit-button" bindtap="editInfo">
+        编辑个人资料 >
+      </view>
+    </block>
+
+    <block wx:else>
+      <view>
+      <button class="button" open-type="getUserInfo" 
+          bindgetuserinfo="bindGetUserInfo">授权登录</button>
+      </view>
+     </block>
+
+     <!-- 收藏、关注 -->
+     <view class="buttons">
+
+      <view class="item" bindtap="toCollection">
+        <view class="img">
+          <image src="../../../imgs/icon/collection.png"></image>
+        </view>
+        <view>收藏</view>
+      </view>
+
+      <view class="sep"></view>
+
+      <view class="item">
+        <view class="img">
+          <image src="../../../imgs/icon/focus.png"></image>
+        </view>
+        <view>关注</view>
+      </view>
+
+     </view>
+
+  </view>
+
+  <view class="my-body">
+
+    <view class="item" bindtap="toMyWork">
+      我的创作
+    </view>
+
+    <view class="item">
+      浏览记录
+    </view>
+
+    <view class="item">
+      意见反馈
+    </view>
+  
+  </view>
+  
+
+</view>

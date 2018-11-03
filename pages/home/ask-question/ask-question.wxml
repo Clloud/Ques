@@ -1,0 +1,30 @@
+<!--pages/discussion/ask-question/ask-question.wxml-->
+<view class="container">
+  <view class="title">
+
+    <view class="input-view">
+      <input class="number" placeholder="请输入标题"
+        placeholder-style="color: #B4B4B4"
+        bindinput="titleInput" value="{{title}}">
+      </input>
+    </view>
+
+  </view>
+
+  <view class="description">
+    <view class="area-view">
+      <textarea placeholder="请输入问题描述(选填)" 
+        placeholder-style="color: #B4B4B4" 
+        bindinput="descriptionInput" value="{{description}}"/>
+    </view>
+  </view>
+
+  <view class="button-frame" bindtap="submit">
+    提交问题
+  </view>
+
+  <view class="alert" style="display:{{alertActive}}">
+    <view class="text">{{msg}}</view>
+  </view>
+
+</view>
